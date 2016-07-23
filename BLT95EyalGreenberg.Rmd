@@ -6,8 +6,8 @@ output: html_document
 ---
 
 ```{r}
-install.packages("tserias")
-library(tserias)
+install.packages("tseries",repos = "NULL")
+library(tseries)
 SNPdata <- get.hist.quote("GWPH",quote="Close")
 SNPret <- log(lag(SNPdata)) - log(SNPdata)
 SNPvol <- sd(SNPret) * sqrt(250) * 100
